@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="A1">
+    <input type="submit" onclick="submitter()">
+    <script>
+       function submitter(){
+            var data=document.getElementById("A1").value;
+            fetch("http://localhost:3001/"+data);
+
+        }
+    </script>
+</body>
+</html>

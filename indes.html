@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Email</h1>
+    <br>
+    <input type="text" name="email" id="A1">
+    <h1>Password</h1>
+    <input type="password" name="pass" id="A3">
+    <button type="submit" id="A4" onclick="send()">Submit</button>
+    <br>
+    <script>
+        const send= ()=>{
+        var email= document.getElementById("A1").value;
+        var pass= document.getElementById("A3").value;
+            fetch('http://localhost:3000/data/',{
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'
+                    },
+                    body:JSON.stringify({id:email, password:pass})
+            });
+            }
+
+    </script>
+</body>
+</html>
